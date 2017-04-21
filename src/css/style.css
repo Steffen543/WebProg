@@ -78,6 +78,7 @@ input[type="text"] {
 	width: 100%;
 	z-index: 10000;
 	box-sizing: border-box;
+    display: block;
 }
 
 #header h1 {
@@ -97,18 +98,21 @@ input[type="text"] {
 /* Main */
 
 #main {
-	padding-top: 4em;	
+	
 	padding-left: 100px;
 	padding-right: 100px;
-	
+    margin-top:75px;
+    overflow: auto;
+    display:block;
+	margin-bottom:50px;
 }
 #main .login {
-	width: 66%;
-	float: left;
+	width: 60%;
+    float:left;
 }
 
 #main .game {
-    width:66%;
+    width:60%;
     float:left;
     display: none;
 }
@@ -141,6 +145,7 @@ input[type="text"] {
 /* sidebar */
 #main .sidebar {	
 	float: right;
+    width: 30%;
 }
 
 

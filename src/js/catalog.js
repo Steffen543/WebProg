@@ -52,6 +52,7 @@ var questionNumber = 0;
                 return false;
             }
 
+            /* !! needs a server to run !! */
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.open("GET", catalogNamePath, false);
             xmlhttp.setRequestHeader('Content-Type', 'text/xml')
@@ -73,6 +74,8 @@ var questionNumber = 0;
             // hide checkboxes
             for (i = 0; i < answerItems.length; i++) {
                 answerItems[i].parentElement.parentElement.style.display = "none";
+                document.getElementsByName("a" + (i+1))[0].checked = false;
+  
             }
             
             
@@ -85,8 +88,16 @@ var questionNumber = 0;
             return true;
         }
         
+        function sendQuestion() {
+            questionNumber++;
+            loadCatalog(selectedCatalog);
+        }
+        
         var startButton = document.getElementById("startGameButton");
         startButton.addEventListener("click", startGame);
+        
+        var sendQuestionButton = document.getElementById("sendQuestionButton");
+        sendQuestionButton.addEventListener("click", sendQuestion);
     }
     
     InitColorChange();
