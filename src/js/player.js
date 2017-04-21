@@ -95,6 +95,7 @@ function Player() {
 		if(login)
 		{
 			drawPlayerList();
+            document.getElementById("input_loginName").value = "";
 		}
 	});
 }());
