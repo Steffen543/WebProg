@@ -1,0 +1,224 @@
+/* Main Items */
+
+body, input, select, textarea {
+	color: #7c8081;
+	font-family: 'Lato', sans-serif;
+	font-size: 15pt;
+	font-weight: 300;
+	letter-spacing: 0.025em;
+	line-height: 1.75em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+
+hr {
+	border-top: solid 1px rgba(124, 128, 129, 0.2);
+	margin-bottom: 1.5em;
+}
+
+
+/* Formular and Inputs */
+
+input[type="text"], textarea {
+
+	border: solid 1px rgba(124, 128, 129, 0.2);
+	display: block;
+	padding: 0.75em;
+	width: 75%;
+	color: #006BB3;
+	outline: 0;
+}
+
+input[type="text"]:focus, textarea:focus {
+	border-color: #006BB3;
+}
+
+input[type="text"] {
+	line-height: 1em;
+}
+
+/* Button */
+
+.button {
+
+	display: inline-block;
+	font-size: 0.8em;
+	font-weight: 900;
+	letter-spacing: 2px;
+	min-width: 18em;
+	padding: 0.75em 0;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.button.special {
+	background: #0E639C;
+	color: white;
+}
+
+.button.special:hover {
+	background: #006BB3;
+}
+
+/* Header */
+
+#header {
+	background: #0E639C;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
+	color: White;
+	cursor: default;
+	font-size: 0.8em;
+	left: 0;
+	padding: 1em 1.5em;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+	box-sizing: border-box;
+    display: block;
+}
+
+#header h1 {
+	font-weight: 900;
+	margin: 0;
+}
+
+
+#header nav {
+	letter-spacing: 0.075em;
+	position: absolute;
+	right: 1.5em;
+	text-transform: uppercase;
+	top: 0.5em;
+}
+
+/* Main */
+
+#main {
+	
+	padding-left: 100px;
+	padding-right: 100px;
+    margin-top:75px;
+    overflow: auto;
+    display:block;
+	margin-bottom:50px;
+}
+#main .login {
+	width: 60%;
+    float:left;
+}
+
+#main .game {
+    width:60%;
+    float:left;
+    display: none;
+}
+
+#main table.score
+{
+	width: 100%;
+	text-align: left;
+	font-size: 0.8em;
+}
+
+#main table.score th
+{
+	color:inherit;
+	width: 50%;
+	border-bottom: 1px solid black;
+	
+}
+
+.answerDiv p {
+    display: inline-block;
+}
+
+.answerDiv input {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* sidebar */
+#main .sidebar {	
+	float: right;
+    width: 30%;
+}
+
+
+
+#main .sidebar section {
+	border-top: solid 1px rgba(124, 128, 129, 0.2);
+	border-bottom: solid 1px rgba(124, 128, 129, 0.2);
+	margin-right: 3em;
+	padding-bottom: 5px;
+	
+}
+
+#main .sidebar a.unselected
+{
+    background: transparent;
+}
+
+#main .sidebar a.selected
+{
+    background: #006BB3;
+    color: white;
+}
+
+#main .sidebar a {
+	color: inherit;
+	display:block;
+	text-decoration: none;
+	padding-left:4px;
+	padding-right:8px;
+}
+
+#main .sidebar a:hover {
+
+	/* background: rgba(188, 202, 206, 0.15); */
+	background:#006BB3;
+	color:white;
+	border-color: inherit;
+	cursor: pointer;
+}
+
+#startGameButton {
+    display: none;
+}
+
+/* Footer */
+
+#footer {
+	background: #e8eef4;
+	color: #7c8081;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	font-size: 0.5em;
+}
+
+
+
+
+/* Container */
+
+.container {
+	background: white;
+	color: inherit;
+	padding: 2em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+#headline {
+    text-align: left;
+    white-space: nowrap;
+}
