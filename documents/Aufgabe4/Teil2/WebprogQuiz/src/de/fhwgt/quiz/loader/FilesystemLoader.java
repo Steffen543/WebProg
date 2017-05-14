@@ -98,13 +98,12 @@ public class FilesystemLoader implements CatalogLoader {
         @Override
         public List<Question> getQuestions(Catalog catalog)
             throws LoaderException {
-        	
             if (!questions.isEmpty()) {
                 return questions;
             }
-
-            SAXBuilder builder = new SAXBuilder();
             
+            SAXBuilder builder = new SAXBuilder();
+            System.out.println("5678");
             try{
                 Document document = (Document) builder.build(catalogFile);
                 Element rootNode = document.getRootElement();
@@ -124,11 +123,13 @@ public class FilesystemLoader implements CatalogLoader {
                     //Get attribute from answer node and add correct and bogus answer to question
                     for (int j = 0; j < list.size(); j++) {
                         Element node2 = (Element) list.get(j);
+                        System.out.println("Text: " + node2.getText());
                         
                         Attribute value = node2.getAttribute("iscorrect");
                         if ((value.getValue().equals("true"))) {
                             //If attribute iscorrect=true then add correct answer
-                            question.addAnswer(node2.getText());                            
+                            question.addAnswer(node2.getText());     
+                           
                         }else{
                             //add false answer
                             question.addBogusAnswer(node2.getText());
@@ -143,11 +144,12 @@ public class FilesystemLoader implements CatalogLoader {
                     }                                                          
                 }                
             } catch (FileNotFoundException e) {
+            	 System.out.println("FileNotFound-Error");
                 throw new LoaderException();            
             } catch (IOException | JDOMException io) {
                   System.out.println(io.getMessage());
+                  System.out.println("IO/JDOM-Error");
             }
-                
             return questions;
         }
     }    
