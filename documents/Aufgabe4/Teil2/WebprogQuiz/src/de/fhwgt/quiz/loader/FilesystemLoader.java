@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.jdom2.*;
-
+import org.jdom2.input.SAXBuilder;
 
 import de.fhwgt.quiz.application.Catalog;
 import de.fhwgt.quiz.application.Question;
@@ -103,7 +103,6 @@ public class FilesystemLoader implements CatalogLoader {
             }
             
             SAXBuilder builder = new SAXBuilder();
-            System.out.println("5678");
             try{
                 Document document = (Document) builder.build(catalogFile);
                 Element rootNode = document.getRootElement();
@@ -146,10 +145,13 @@ public class FilesystemLoader implements CatalogLoader {
             } catch (FileNotFoundException e) {
             	 System.out.println("FileNotFound-Error");
                 throw new LoaderException();            
-            } catch (IOException | JDOMException io) {
+            } catch (IOException io) {
                   System.out.println(io.getMessage());
-                  System.out.println("IO/JDOM-Error");
-            }
+                  System.out.println("IO-Error");
+            } catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
             return questions;
         }
     }    
