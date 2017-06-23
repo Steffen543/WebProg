@@ -111,10 +111,17 @@ input[type="text"] {
     float:left;
 }
 
+#main .start {
+	display:none;
+	width: 60%;
+    float:left;
+}
+
 #main .game {
     width:60%;
     float:left;
     display: none;
+   
 }
 
 #main table.score
@@ -186,7 +193,7 @@ input[type="text"] {
 	cursor: pointer;
 }
 
-#startGameButton {
+#startGamePanel {
     display: none;
 }
 
