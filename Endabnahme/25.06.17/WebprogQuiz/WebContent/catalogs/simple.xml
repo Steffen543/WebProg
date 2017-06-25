@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+	<question>
+		<questiontext>Sie möchten eine Datenstruktur vor gleichzeitigem Zugriff aus mehreren Threads schützen. Welcher Mechanismus ist dafür geeignet?</questiontext>
+		<timeout>4</timeout>
+		<answer iscorrect="true">mit dem Systemaufruf select</answer>
+		<answer iscorrect="false">durch einen zusätzlichen Timeout-Parameter bei read oder recv</answer>
+		<answer iscorrect="false">gar nicht</answer>
+		<answer iscorrect="false">durch Setzen des Timeout-Status mit fcntl</answer>
+	</question>
+	<question>
+		<questiontext>Der Systemaufruf fork...</questiontext>	
+		<timeout>4</timeout>
+        <answer iscorrect="true">...erzeugt einen neuen Prozess, der das gleiche Programm ausführt.</answer>
+		<answer iscorrect="false">...erzeugt einen neuen Prozess, der ein anderes Programm ausführt.</answer>
+		<answer iscorrect="false">...erzeugt einen neuen Thread.</answer>
+		<answer iscorrect="false">...ist das logische Gegenstück zum Aufruf knife.</answer>
+	</question>
+	<question>
+		<questiontext>In einem Signalhandler...</questiontext>	
+		<timeout>4</timeout>		
+		<answer iscorrect="true">...dürfen nur bestimmte Funktionen aufgerufen werden.</answer>
+		<answer iscorrect="false">...kann man problemlos alles machen, was man auch im regulären Programmcode macht.</answer>
+		<answer iscorrect="false">...dürfen keine Fließkommaoperationen durchgeführt werden.</answer>
+		<answer iscorrect="false">...ist nur der Systemaufruf write verboten.</answer>
+	</question>
+	<question>
+		<questiontext>Sie möchten eine Datenstruktur vor gleichzeitigem Zugriff aus mehreren Threads schützen. Welcher Mechanismus ist dafür geeignet?</questiontext>
+		<timeout>4</timeout>
+		<answer iscorrect="true">mit dem Systemaufruf select</answer>
+		<answer iscorrect="false">durch einen zusätzlichen Timeout-Parameter bei read oder recv</answer>
+		<answer iscorrect="false">gar nicht</answer>
+		<answer iscorrect="false">durch Setzen des Timeout-Status mit fcntl</answer>
+	</question>	
+</catalog>
